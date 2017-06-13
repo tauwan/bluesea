@@ -26,24 +26,21 @@ NTP.Extraction = NTP.Extraction || {};
       return dataObject;
     };
 
-    NTP.Extraction.Default = function(source, dataObject)
-    {
+    NTP.Extraction.Default = function(source, dataObject) {
         var item = $(source);
         var key = item.attr(_NTP_CONSTANTS.jsonKey);
 
         dataObject[key] = item.val() || "";
     };
 
-    NTP.Extraction.Checkbox = function(source, dataObject)
-    {
+    NTP.Extraction.Checkbox = function(source, dataObject) {
         var item = $(source);
         var key = item.attr(_NTP_CONSTANTS.jsonKey);
 
         dataObject[key] = item.prop('checked');
     };
 
-    NTP.Extraction.CheckboxList = function(source, dataObject)
-    {
+    NTP.Extraction.CheckboxList = function(source, dataObject) {
         var item = $(source);
 
         if (item.prop('checked')) {
@@ -57,16 +54,14 @@ NTP.Extraction = NTP.Extraction || {};
           }
     };
 
-    NTP.Extraction.DropdownList = function(source, dataObject)
-    {
+    NTP.Extraction.DropdownList = function(source, dataObject) {
         var item = $(source);
         var key = item.attr(_NTP_CONSTANTS.jsonKey);
 
         dataObject[key] = item.find('option:selected').val();
     };
 
-    NTP.Extraction.RadioButtonList = function(source, dataObject)
-    {
+    NTP.Extraction.RadioButtonList = function(source, dataObject) {
         var item = $(source);
 
         if (item.prop('checked')) {
