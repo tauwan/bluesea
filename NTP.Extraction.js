@@ -5,6 +5,7 @@ NTP.Extraction = NTP.Extraction || {};
 
 (function() {
     NTP.Extraction.Main = function() {
+		alert('hello');
         var dataObject = {};
 
         // use reflection to call extract method for each js
