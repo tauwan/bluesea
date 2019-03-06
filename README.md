@@ -1,1 +1,1 @@
-# bluesea - use to host javascripts
+# bluesea - use to host python
